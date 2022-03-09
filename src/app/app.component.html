@@ -1,15 +1,49 @@
-<nav class="nav navbar-default">
-  <div class="container-fluid">
-      <a class="navbar-brand" href="#">Logo</a>
-    <ul class="nav navbar-nav">
-      <li routerLinkActive="active"><a routerLink="home"> Acceuil </a></li>
-      <li routerLinkActive="active"><a routerLink="deviceApp"> Device & App </a></li>
-      <li routerLinkActive="active"><a routerLink="scientificValidation"> Scientific Validation </a></li>
-      <li routerLinkActive="active"><a routerLink="aboutUs"> About Us </a></li>
-    </ul>
-    <button class="btn btn-primary" [routerLink]="['login']">Login</button>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
+  <div class="container">
+    <a class="navbar-brand" routerLink="home"
+    ><img
+      id="MDB-logo"
+      src="../assets/Images/img_1.png"
+      alt="MDB Logo"
+      draggable="false"
+      height="90"
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item">
+          <a class="nav-link mx-2" routerLink="home">Acceuil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" routerLink="deviceApp">Device & App</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" routerLink="scientificValidation">cientific Validation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" routerLink="aboutUs">About Us</a>
+        </li>
+        <li class="nav-item ms-3">
+          <button type="button" class="btn btn-success" [routerLink]="['login']">Login</button>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
+<br>
+<br>
+<br>
 <div class="container">
   <div class="row">
     <router-outlet></router-outlet>
