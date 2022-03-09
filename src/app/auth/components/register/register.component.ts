@@ -14,6 +14,9 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(form: NgForm):void {
+    if (form.value['password'] !== form.value['confirmPassword']) {
+      console.log('test here');
+    }
     console.log(form.value);
     console.log(form.valid);
   }
