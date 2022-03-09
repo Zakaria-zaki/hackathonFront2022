@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {NgForm} from "@angular/forms";
+import {AuthentificationApiService} from "../../authentification-api.service";
 
 @Component({
   selector: 'app-login',
@@ -8,14 +9,35 @@ import {NgForm} from "@angular/forms";
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  // private readonly authenticationApiService: AuthentificationApiService;
+
+
+  // constructor(authenticationApiService: AuthentificationApiService) {
+  //   this.authenticationApiService = authenticationApiService;
+  // }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
-  onSubmit(form: NgForm) {
+  onSubmit(f: NgForm) {
+    console.log(f.value);
+  }
+
+
+
+  async onLogin(form: NgForm) {
     console.log(form.value);
-    console.log(form.valid);
+    let email = form.value['email'];
+    let password = form.value['password'];
+
+    // here we check login compte
+    try {
+       // await this.authenticationApiService.login(email, password);
+    } catch (err) {
+      console.log(err);
+    }
   }
 
 }
