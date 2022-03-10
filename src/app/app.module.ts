@@ -12,7 +12,7 @@ import {AuthModule} from "./auth/auth.module";
 import {AdminModule} from "./admin/admin.module";
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, NgForm} from "@angular/forms";
 import { FooterComponent } from './footer/footer.component';
 
 const appRoutes: Routes = [
@@ -38,11 +38,11 @@ const appRoutes: Routes = [
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
-    AdminModule
+    AdminModule,
   ],
   providers: [],
   exports: [
-    HeaderComponent
+    HeaderComponent,
   ],
   bootstrap: [AppComponent]
 })

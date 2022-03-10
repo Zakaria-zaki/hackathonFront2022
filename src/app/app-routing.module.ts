@@ -6,6 +6,7 @@ import {HomeComponent} from "./home/home.component";
 import {DeviceAndAppComponent} from "./device-and-app/device-and-app.component";
 import {ScientificValidationComponent} from "./scientific-validation/scientific-validation.component";
 import {AboutUsComponent} from "./about-us/about-us.component";
+import {RegisterComponent} from "./auth/components/register/register.component";
 
 const routes: Routes = [
   { path: '', component: HeaderComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'scientificValidation', component: ScientificValidationComponent },
   { path: 'aboutUs', component: AboutUsComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
 ];
 
 @NgModule({
