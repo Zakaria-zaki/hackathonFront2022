@@ -9,13 +9,17 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { DeviceAndAppComponent } from './device-and-app/device-and-app.component';
 import { ScientificValidationComponent } from './scientific-validation/scientific-validation.component';
 import {AuthModule} from "./auth/auth.module";
+import {AdminModule} from "./admin/admin.module";
+import { HeaderComponent } from './header/header.component';
+import { LoginComponent } from './login/login.component';
+import {FormsModule} from "@angular/forms";
+import { FooterComponent } from './footer/footer.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'deviceApp', component: DeviceAndAppComponent},
   { path: 'scientificValidation', component: ScientificValidationComponent},
   { path: 'aboutUs', component: AboutUsComponent},
-
 ];
 
 @NgModule({
@@ -25,14 +29,21 @@ const appRoutes: Routes = [
     AboutUsComponent,
     DeviceAndAppComponent,
     ScientificValidationComponent,
+    HeaderComponent,
+    LoginComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
-    AuthModule
+    FormsModule,
+    AdminModule
   ],
   providers: [],
+  exports: [
+    HeaderComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
