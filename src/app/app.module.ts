@@ -14,6 +14,7 @@ import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import {FormsModule, NgForm} from "@angular/forms";
 import { FooterComponent } from './footer/footer.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -32,6 +33,7 @@ const appRoutes: Routes = [
     HeaderComponent,
     LoginComponent,
     FooterComponent,
+    AdminPageComponent,
   ],
   imports: [
     BrowserModule,

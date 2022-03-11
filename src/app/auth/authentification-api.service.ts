@@ -27,4 +27,42 @@ export class AuthentificationApiService {
 
     return user;
   }
+
+  async register(username: string, email: string, password: string): Promise<any> {
+    // here is the api from the back
+    const url = 'user/register';
+
+    const body = {
+      username: username,
+      email: email,
+      password: password,
+    };
+
+    let user;
+    try {
+      user = await this.client.post<any>(url, body).toPromise();
+    } catch (error) {
+      console.log(error);
+    }
+
+    return user;
+  }
+
+  async resetPassword(email: string): Promise<any> {
+    // here is the api from the back
+    const url = 'user/register';
+
+    const body = {
+      email: email,
+    };
+
+    let user;
+    try {
+      user = await this.client.post<any>(url, body).toPromise();
+    } catch (error) {
+      console.log(error);
+    }
+
+    return user;
+  }
 }
