@@ -1,0 +1,93 @@
+<section class="vh-150">
+    <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-block">
+              <img
+                src="/assets/Images/img_8.png"
+                alt="login form"
+                class="img-fluid" style="border-radius: 1rem 0 0 1rem; height: 100%"
+              />
+            </div>
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+
+                <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+                  <label class="form-label">Welcome to you</label>
+                  <h2 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Register</h2>
+
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="registerUsername">Username :</label>
+                    <input type="text" name="username" ngModel required #username="ngModel"
+                           id="registerUsername" class="form-control form-control-lg" />
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="loginEmail">Email address</label>
+                    <input type="email" name="email" ngModel required #email="ngModel"
+                           id="loginEmail" class="form-control form-control-lg" />
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="registerPassword">Password</label>
+                    <input type="password" name="password" ngModel required #password="ngModel"
+                           id="registerPassword" class="form-control form-control-lg" />
+                  </div>
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="registerConfirmPassword">Confirm password</label>
+                    <input type="password" name="confirmPassword" ngModel required #confirmPassword="ngModel"
+                           id="registerConfirmPassword" class="form-control form-control-lg" />
+                  </div>
+
+                  <div class="pt-1 mb-4">
+                    <button class="btn btn-lg btn-block" style="background-color: #5CB2A6; color: antiquewhite" type="submit" [disabled]="f.invalid">Register now</button>
+                  </div>
+
+                  <p class="mb-5 pb-lg-2" style="color: #393f81;">You have an account? <a [routerLink]="['/login']" style="color: #393f81;">Sing in</a></p>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!--
+<div class="row">
+  <div class="col-md-6 offset-md-3 mt-4">
+    <h3> Inscription </h3>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <div class="form-group">
+        <label for="registerUsername">Username :</label>
+        <input type="text" name="username" ngModel required #username="ngModel"
+               class="form-control" id="registerUsername" placeholder="Entrez votre Username">
+      </div>
+      <div class="form-group">
+        <label for="registerEmail">Email :</label>
+        <input type="email" name="email" ngModel required #email="ngModel"
+               class="form-control" id="registerEmail" placeholder="Entrez votre email">
+      </div>
+      <div class="form-group">
+        <label for="registerAge">Age :</label>
+        <input type="text" name="age" ngModel required #age="ngModel"
+               class="form-control" id="registerAge" placeholder="Entrez votre age">
+      </div>
+      <div class="form-group">
+        <label for="loginPassword">Password</label>
+        <input type="password" name="password" ngModel required #password="ngModel"
+               class="form-control" id="loginPassword" placeholder="mot de passe">
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="f.invalid" > Inscription </button>
+    </form>
+  </div>
+</div>
+-->
+
+

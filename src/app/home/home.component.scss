@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+::selection{
+  color: #000;
+  background: #fff;
+}
+.img{
+  background: url('../../assets/Images/img_2.png');
+  width: 100%;
+  height: 70vh;
+  background-size: cover;
+  position: relative;
+}
+.img::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.center{
+  position: absolute;
+  top: 52%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 20px;
+  text-align: left;
+}
+.center .title{
+  color: #fff;
+  font-size: 55px;
+  font-weight: 600;
+}
+.center .sub_title{
+  color: #fff;
+  font-size: 35px;
+}
+.center .btns{
+  margin-top: 20px;
+}
+.center .btns button{
+  height: 55px;
+  width: 170px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 10px;
+  border: 2px solid white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.center .btns button:first-child{
+  color: #fff;
+  background: #5CB2A6;
+  border-color: #5CB2A6;
+}
+.btns button:first-child:hover{
+  background: white;
+  color: black;
+}
+.center .btns button:last-child{
+  background: black;
+  color: #fff;
+  border-color: black;
+}
+.imgOne{
+  background: url('../../assets/Images/img_4.png');
+  width: 60%;
+  height: 70vh;
+  left: 50%;
+  background-size: cover;
+  position: center;
+}
+.imgOne::before{
+  content: '';
+  height: 100%;
+  width: 60%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.centerOne{
+  position: absolute;
+  top: 1360px;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 20px;
+  text-align: left;
+}
+.centerOne .titleOne{
+  color: #fff;
+  font-size: 55px;
+  font-weight: 600;
+}
+.centerOne .sub_titleOne{
+  color: #fff;
+  font-size: 35px;
+}
+
+.dashboardTitle {
+  text-align: center;
+  color: #5CB2A6;
+}
+
+.dashboard_sub_one {
+  color: black;
+  font-size: 55px;
+  font-weight: 600;
+  text-align: center;
+}
+.dashboard_sub_two {
+  color: black;
+  font-size: 55px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.dashboard_sub_desc {
+  text-align: center;
+}
+
+.dashborad_modal {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.dashboard_tel {
+  margin-left: 180px;
+}
+
+.telTitle {
+  text-align: center;
+  color: black;
+  padding-top: 200px;
+}
+
+.tel_sub {
+  text-align: center;
+  color: #5c5b5e;
+  font-size: 20px;
+}
+
+.dashboard_tel_app {
+  margin-left: 200px;
+}
+
+.our_img{
+  margin-left: 100px;
+}
+
+.our_title_one {
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.our_title_two {
+  margin-left: 40px;
+}
+
+.our_sub {
+  margin-left: 40px;
+  font-size: 20px;
+  margin-top: 30px;
+}
+
