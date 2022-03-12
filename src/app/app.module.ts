@@ -15,6 +15,8 @@ import { LoginComponent } from './login/login.component';
 import {FormsModule, NgForm} from "@angular/forms";
 import { FooterComponent } from './footer/footer.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
+import {FlatfileAdapterModule} from "@flatfile/angular";
+import {NgChartsModule} from "ng2-charts";
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -41,6 +43,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     FormsModule,
     AdminModule,
+    FlatfileAdapterModule,
+    NgChartsModule
   ],
   providers: [],
   exports: [
