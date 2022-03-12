@@ -8,9 +8,7 @@ import {AuthentificationApiService} from "../../authentification-api.service";
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
   // private readonly authenticationApiService: AuthentificationApiService;
-
 
   // constructor(authenticationApiService: AuthentificationApiService) {
   //   this.authenticationApiService = authenticationApiService;
@@ -21,20 +19,15 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(f: NgForm) {
-    console.log(f.value);
-  }
-
-
 
   async onLogin(form: NgForm) {
     console.log(form.value);
+    let username = form.value['username'];
     let email = form.value['email'];
     let password = form.value['password'];
-
-    // here we check login compte
+    // here we check register compte
     try {
-       // await this.authenticationApiService.login(email, password);
+       // await this.authenticationApiService.resetPassword(username, email, password);
     } catch (err) {
       console.log(err);
     }

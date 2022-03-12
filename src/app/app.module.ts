@@ -12,8 +12,11 @@ import {AuthModule} from "./auth/auth.module";
 import {AdminModule} from "./admin/admin.module";
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, NgForm} from "@angular/forms";
 import { FooterComponent } from './footer/footer.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
+import {FlatfileAdapterModule} from "@flatfile/angular";
+import {NgChartsModule} from "ng2-charts";
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -32,17 +35,20 @@ const appRoutes: Routes = [
     HeaderComponent,
     LoginComponent,
     FooterComponent,
+    AdminPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
-    AdminModule
+    AdminModule,
+    FlatfileAdapterModule,
+    NgChartsModule
   ],
   providers: [],
   exports: [
-    HeaderComponent
+    HeaderComponent,
   ],
   bootstrap: [AppComponent]
 })
