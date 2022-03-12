@@ -18,5 +18,9 @@ export class BackendClientService {
     return this.httpClient.post<T>(environment.backend + url, input);
   }
 
+  public delete<T>(url: string): Observable<T> {
+    return this.httpClient.delete<T>(environment.backend + url);
+  }
+
 
 }
